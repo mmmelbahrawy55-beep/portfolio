@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Marwan Mohamed — Full-Stack, 3D & Mobile Developer from Egypt. Building modern web experiences with React, TypeScript, Three.js and more." />
+  <meta name="keywords" content="Marwan Mohamed, Full-Stack Developer, 3D Developer, Three.js, React, TypeScript, Egypt, Web Developer, Mobile Developer" />
+  <meta name="author" content="Marwan Mohamed" />
+  <meta property="og:title" content="Marwan Mohamed — Portfolio" />
+  <meta property="og:description" content="Full-Stack · 3D · Mobile Developer from Egypt 🇪🇬" />
+  <meta property="og:type" content="website" />
+  <title>Marwan Mohamed — Full-Stack · 3D · Mobile Developer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    :root {
+      --bg: #0a0a0f;
+      --bg-2: #12121a;
+      --card: rgba(255, 255, 255, 0.03);
+      --card-hover: rgba(255, 255, 255, 0.06);
+      --border: rgba(255, 255, 255, 0.08);
+      --border-hover: rgba(255, 255, 255, 0.15);
+      --text: #ffffff;
+      --text-2: #a0a0b0;
+      --text-3: #6b6b7b;
+      --lilac: #B8A9E8;
+      --amber: #F5A623;
+      --teal: #4ECDC4;
+      --coral: #FF6B6B;
+      --green: #4ADE80;
+    }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      overflow-x: hidden;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+    code, .mono { font-family: 'JetBrains Mono', monospace; }
+
+    /* Animated Background */
+    .bg-gradient {
+      position: fixed; inset: 0; z-index: -2;
+      background: radial-gradient(ellipse at top left, rgba(184, 169, 232, 0.15) 0%, transparent 50%),
+                  radial-gradient(ellipse at bottom right, rgba(78, 205, 196, 0.1) 0%, transparent 50%),
+                  radial-gradient(ellipse at center, rgba(245, 166, 35, 0.08) 0%, transparent 60%);
+    }
+    .bg-grid {
+      position: fixed; inset: 0; z-index: -1; opacity: 0.4;
+      background-image:
+        linear-gradient(rgba(255,255,255,0.02) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,0.02) 1px, transparent 1px);
+      background-size: 60px 60px;
+      mask-image: radial-gradient(ellipse at center, black 40%, transparent 100%);
+    }
+    .orb {
+      position: fixed; border-radius: 50%; filter: blur(80px); opacity: 0.4; z-index: -1;
+      animation: float 20s ease-in-out infinite;
+    }
+    .orb-1 { width: 500px; height: 500px; background: var(--lilac); top: -100px; left: -100px; }
+    .orb-2 { width: 400px; height: 400px; background: var(--teal); bottom: -100px; right: -100px; animation-delay: -10s; }
+    @keyframes float {
+      0%, 100% { transform: translate(0, 0) scale(1); }
+      50% { transform: translate(50px, 30px) scale(1.1); }
+    }
+
+    /* Navigation */
+    nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px);
+      background: rgba(10, 10, 15, 0.7);
+      border-bottom: 1px solid var(--border);
+      padding: 16px 0;
+    }
+    .nav-container {
+      max-width: 1200px; margin: 0 auto; padding: 0 24px;
+      display: flex; align-items: center; justify-content: space-between;
+    }
+    .logo {
+      font-weight: 800; font-size: 18px; letter-spacing: -0.02em;
+      display: flex; align-items: center; gap: 10px;
+    }
